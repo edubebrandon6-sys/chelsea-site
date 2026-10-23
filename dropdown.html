@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown-menu</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+    #dropdownBtn{
+        padding: 12px 20px;
+        background: blue;
+        color: white;
+        min-width: 150px;
+        box-shadow: 0 4px 8px #ccc;
+    }
+    .dropdown-content{
+        display: none;
+        padding: 12px;
+        text-decoration: none;
+        color: black;
+    }
+    .dropdown-content a:hover{
+        background: #eee;
+    }
+    .dropdown-content.show{
+        display: block;
+    }
+</style>
+<body>
+    <div class="dropdown">
+        <button id="dropdownBtn"><i class='bx bx-down-arrow-alt'></i></button>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <script>
+        const dropdownBtn=document.getElementById("dropdownBtn")
+        const dropdownContent=document.getElementById("dropdownContent")
+        dropdownBtn.addEventListener("click",()=>{
+            dropdownContent.classList.toggle("show")
+        })
+    </script>
+</body>
+</html>

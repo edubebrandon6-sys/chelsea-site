@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    #product{
+        padding: 60px 30px;
+    }
+    .product-text{
+        display: flex;
+        justify-content: space-between;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        max-width: 600px;
+        gap: 30px;
+    }
+    .card{
+        width: 280px;
+        overflow: hidden;
+        background: #ccc;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        position: relative;
+        padding: 10px;
+    }
+    .card img{
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+    .heart{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .card:nth-child(n+4){
+        display: none;
+    }
+    .container.show-all .card{
+        display: block;
+    }
+
+
+</style>
+<body>
+    <section id="product">
+        <div class="product-text">
+            <div class="products">
+                <span class="span">Our Card</span>
+                <h2>Quality Cards</h2>
+            </div>
+            <a href="#" id="viewAll">
+                viewAll
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+        </div>
+        <div class="container" id="cards">
+        <div class="card">
+            <span class="heart" id="heart"><i class='bx bxs-heart' ></i></span>
+            <img src="head-removebg-preview.png" alt="">
+            <div class="content">
+                <h2>Wireless Headphones</h2>
+                <h3>2,999 <del>4,999</del></h3>
+                <div class="star">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    (210)
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+         <div class="card">
+            <span class="heart"><i class='bx bxs-heart' ></i></span>
+            <img src="sneaker-removebg-preview.png" alt="">
+            <div class="content">
+                <h2>Running Shoes</h2>
+                <h3>1,899 <del>2,999</del></h3>
+                <div class="star">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    (98)
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+         <div class="card">
+            <span class="heart"><i class='bx bxs-heart' ></i></span>
+            <img src="watch-removebg-preview.png" alt="">
+            <div class="content">
+                <h2>Smart Watch</h2>
+                <h3>3,499 <del>5,999</del></h3>
+                <div class="star">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    (210)
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+         <div class="card">
+            <span class="heart"><i class='bx bxs-heart' ></i></span>
+            <img src="bag-removebg-preview.png" alt="">
+            <div class="content">
+                <h2>Travel Backpack</h2>
+                <h3>1,222 <del>4,999</del></h3>
+                <div class="star">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    (98)
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+         <div class="card">
+            <span class="heart"><i class='bx bxs-heart' ></i></span>
+            <img src="bag-removebg-preview.png" alt="">
+            <div class="content">
+                <h2>Travel Backpack</h2>
+                <h3>1,222 <del>4,999</del></h3>
+                <div class="star">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    (98)
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+         <div class="card">
+            <span class="heart"><i class='bx bxs-heart' ></i></span>
+            <img src="bag-removebg-preview.png" alt="">
+            <div class="content">
+                <h2>Travel Backpack</h2>
+                <h3>1,222 <del>4,999</del></h3>
+                <div class="star">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    (98)
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script>
+        const viewAll = document.getElementById("viewAll")
+        const cards=document.getElementById("cards")
+        viewAll.addEventListener("click",(e)=>{
+            e.preventDefault()
+            cards.classList.toggle("show-all")
+        })
+    </script>
+</body>
+</html>

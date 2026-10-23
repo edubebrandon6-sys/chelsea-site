@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        display: grid;
+       grid-template-columns: repeat(3,1fr);
+        gap: 22px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .card{
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        background: white;
+}
+.card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+.content{
+    padding: 15px;
+}
+.category{
+    margin-bottom: 8px;
+}
+.content h3{
+    min-height: 48px;
+    line-height: 1.5;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width:768px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+</style>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="match-report.jpg" alt="">
+            <div class="content">
+                <p class="category">Match Report</p>
+                <h3>Chelsea 2-0 everton</h3>
+                <div class="bottom">
+                    <span class="dates">17 oct 2026</span>
+                  <a href="#" class="rows"> <i class='bx bx-right-arrow-alt' ></i></a>
+                </div>
+            </div>
+        </div>
+         <div class="card">
+            <img src="match-report.jpg" alt="">
+            <div class="content">
+                <p class="category">Match Report</p>
+                <h3>Chelsea 2-0 everton</h3>
+                <div class="bottom">
+                    <span class="dates">17 oct 2026</span>
+                  <a href="#" class="rows"> <i class='bx bx-right-arrow-alt' ></i></a>
+                </div>
+            </div>
+        </div>
+         <div class="card">
+            <img src="match-report.jpg" alt="">
+            <div class="content">
+                <p class="category">Match Report</p>
+                <h3>Chelsea 2-0 everton</h3>
+                <div class="bottom">
+                    <span class="dates">17 oct 2026</span>
+                  <a href="#" class="rows"><i class='bx bx-right-arrow-alt' ></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const row=document.querySelectorAll(".rows")
+        row.forEach(rows=>{
+        rows.addEventListener("click",(e)=>{
+            alert("chelsea incoming news")
+        })
+        })
+    </script>
+</body>
+</html>

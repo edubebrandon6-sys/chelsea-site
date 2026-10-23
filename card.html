@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: tomato;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .card{
+        width: 280px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        position: relative;
+        background: #ccc;
+    }
+    .heart{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 18px;
+    }
+    .heart.show{
+        color: red;
+
+    }
+    .card img{
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+        display: block;
+    }
+    .content{
+        background: white;
+        padding: 15px;
+        text-align: center;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .content h3{
+        margin-bottom: 5px;
+    }
+    .star{
+        margin-top: 10px;
+    }
+    .star i{
+        color: gold;
+    }
+    .btn{
+        margin-top: 10px;
+        padding: 13px 16px;
+       background: aqua;
+       width: 200px;
+       border: none;
+       border-radius: 15px;
+       font-size: 16px;
+    }
+    .header{
+        position: sticky;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 100;
+        padding: 15px 5%;
+    }
+</style>
+<body>
+  
+    <div class="container">
+        <div class="card">
+            <span class="heart" id="heart"><i class='bx bxs-heart' ></i></span>
+            <img src="head-removebg-preview.png" alt="">
+            <div class="content">
+                <h2>Wireless Headphones</h2>
+                <h3>2,999 <del>4,999</del></h3>
+                <div class="star">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    (210)
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+         <div class="card">
+            <span class="heart"><i class='bx bxs-heart' ></i></span>
+            <img src="sneaker-removebg-preview.png" alt="">
+            <div class="content">
+                <h2>Running Shoes</h2>
+                <h3>1,899 <del>2,999</del></h3>
+                <div class="star">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    (98)
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+         <div class="card">
+            <span class="heart"><i class='bx bxs-heart' ></i></span>
+            <img src="watch-removebg-preview.png" alt="">
+            <div class="content">
+                <h2>Smart Watch</h2>
+                <h3>3,499 <del>5,999</del></h3>
+                <div class="star">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    (210)
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+         <div class="card">
+            <span class="heart"><i class='bx bxs-heart' ></i></span>
+            <img src="bag-removebg-preview.png" alt="">
+            <div class="content">
+                <h2>Travel Backpack</h2>
+                <h3>1,222 <del>4,999</del></h3>
+                <div class="star">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    (98)
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+      const heart = document.querySelectorAll(".heart")
+     heart.forEach(hearts=>{
+        hearts.addEventListener("click",()=>{
+            console.log("click")
+            hearts.classList.toggle("show")
+        })
+     })
+    
+       
+    
+        
+    </script>
+</body>
+</html>

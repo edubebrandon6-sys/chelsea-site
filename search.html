@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    .container{
+        max-width: 400px;
+        margin: auto;
+    }
+    #search{
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    .product{
+        padding: 12px;
+        background: #f1f1f1;
+        margin: 8px 0;
+    }
+</style>
+<body>
+    <div class="container">
+        <input type="text" id="search" placeholder="search products...">
+        <div class="products">
+            <p class="product">Nike</p>
+            <p class="product">Adidas</p>
+            <p class="product">iphone 16</p>
+            <p class="product">Samsung Galaxy</p>
+            <p class="product">HP Laptop</p>
+            <p class="product">Dell Laptop</p>
+            <p class="product">Chelsea Boots</p>
+            <p class="product">Chelsea jersey</p>
+        </div>
+    </div>
+    <script>
+        const search=document.getElementById("search")
+        const products=document.querySelectorAll(".product")
+        search.addEventListener("input",()=>{
+            const searchValue=search.value.toLowerCase()
+            products.forEach(product=>{
+                const productName = product.textContent.toLowerCase()
+                if(productName.includes(searchValue)){
+                    product.style.display="block"
+                }else{
+                    product.style.display="none"
+                }
+            })
+        
+        })
+    </script>
+</body>
+</html>
